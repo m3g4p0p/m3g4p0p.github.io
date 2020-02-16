@@ -1,0 +1,53 @@
+@import './fonts/menlo.css';
+
+:root {
+  --color-primary: #9ACD32;
+  --color-primary-dark: #5C8803
+}
+
+body {
+  margin: 1em 0 0;
+  background-color: black;
+  color: var(--color-primary);
+  font-family: 'Menlo Regular', 'Courier New', Courier, monospace;
+  transition: color .2s ease-in-out;
+}
+
+body.touched {
+  color: var(--color-primary-dark);
+  transition: color .1s ease-out;
+}
+
+main,
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em 0;
+}
+
+article {
+  max-width: 600px;
+}
+
+article iframe {
+  margin-top: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active,
+a:visited {
+  color: var(--color-primary-dark);
+}

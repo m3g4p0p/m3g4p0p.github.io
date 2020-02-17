@@ -1,4 +1,5 @@
 @import './fonts/menlo.css';
+@import './colors.css';
 
 :root {
   --color-primary: #9ACD32;
@@ -13,7 +14,7 @@ body {
   transition: color .2s ease-in-out;
 }
 
-body.touched {
+.scrolling {
   color: var(--color-primary-dark);
   transition: color .1s ease-out;
 }
@@ -27,10 +28,12 @@ article {
 }
 
 article {
+  align-items: stretch;
   max-width: 600px;
 }
 
 article iframe {
+  align-self: center;
   margin-top: auto;
 }
 

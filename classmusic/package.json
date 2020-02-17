@@ -3,5 +3,8 @@
   "version": "6.6.6",
   "dependencies": {
     "cross-env": "5.0.5"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
   }
 }

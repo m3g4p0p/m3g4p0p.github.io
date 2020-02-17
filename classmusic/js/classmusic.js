@@ -1,4 +1,5 @@
-import ALBUMS from './albums.js'
+import { ALBUMS } from './config.js'
+import { ScrollHandler } from './scroll-handler.js'
 
 /**
  * @type {HTMLElement}
@@ -58,11 +59,20 @@ function createCard (album) {
   return card
 }
 
-ALBUMS.forEach(album => {
-  const player = createPlayer(album)
-  const card = createCard(album, player)
-  const iframe = card.querySelector('iframe')
+function populateContent () {
+  ALBUMS.forEach(album => {
+    const player = createPlayer(album)
+    const card = createCard(album, player)
+    const iframe = card.querySelector('iframe')
 
-  iframe.replaceWith(player)
-  main.appendChild(card)
-})
+    iframe.replaceWith(player)
+    main.appendChild(card)
+  })
+}
+
+const scrollHandler = new ScrollHandler(() => {
+  document.body.classList.toggle('scrolling')
+}, 200)
+
+scrollHandler.init()
+populateContent()

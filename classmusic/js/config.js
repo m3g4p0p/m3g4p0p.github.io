@@ -1,4 +1,4 @@
-export default [
+export const ALBUMS = [
   {
     album: '1181245919',
     size: 'large',

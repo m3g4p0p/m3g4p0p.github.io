@@ -28,6 +28,10 @@ main {
   align-content: center;
   flex-wrap: wrap;
   min-height: 100vh;
+
+  > * {
+    text-align: center;
+  }
 }
 
 h1 {
@@ -39,4 +43,6 @@ h1 {
 
 p {
   text-align: center;
+  text-shadow: black 2px 2px;
+  font-size: 2em;
 }

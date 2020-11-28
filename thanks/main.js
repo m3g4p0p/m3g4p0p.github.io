@@ -5,7 +5,7 @@ const matchPxs = /\d+(?=px)/g
 const pxs = shadow.match(matchPxs)
 
 function animate () {
-  const altered = pxs.map(Number).map(value => value + (Math.random() * MAX_DELTA * 2 - MAX_DELTA))
+  const altered = pxs.map(Number).map(value => value + Math.round(Math.random() * MAX_DELTA * 2 - MAX_DELTA, 10))
   let i = 0
   headline.style.textShadow = shadow.replace(matchPxs, () => altered[i++])
   window.requestAnimationFrame(animate)

@@ -1,4 +1,6 @@
 {
-  "private": true,
-  "workspaces": ["classmusic"]
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "standard": "^16.0.3"
+  }
 }
